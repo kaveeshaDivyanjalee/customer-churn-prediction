@@ -1,237 +1,208 @@
-# 🎯 Customer Churn Prediction System
+# 🚀 Customer Churn Prediction System | End-to-End ML Portfolio Project
 
-![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
-![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?logo=scikit-learn&logoColor=white)
-![License](https://img.shields.io/badge/license-MIT-green)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-Deployed-FF4B4B?logo=streamlit&logoColor=white)
+![ML](https://img.shields.io/badge/Machine%20Learning-Random%20Forest-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-A complete end-to-end machine learning system that predicts customer churn with **93.5% accuracy** using Random Forest classification. Features a production-ready Streamlit web application with interactive dashboard, batch processing, and actionable business insights.
+> **AI-powered Customer Churn Prediction System** achieving **93.48% accuracy**, built using real telecom customer data and deployed as an interactive Streamlit web application.
 
-## 🌟 Live Demo
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://customer-churn-prediction-bczicccnktkymsfewgwurk.streamlit.app/)
+---
 
-*Click above to try the live application!*
+## 🌐 Live Application
 
-## 📊 Key Features
+👉 **Try the App:**  
+🔗 https://customer-churn-prediction-bczicccnktkymsfewgwurk.streamlit.app/
 
-### 🔮 **Prediction Capabilities**
-- **Single Customer Prediction**: Real-time churn prediction for individual customers
-- **Batch Processing**: Upload CSV files for bulk predictions (1000+ customers)
-- **Feature Engineering**: 29+ engineered features from raw customer data
+---
 
-### 📈 **Analytics & Insights**
-- **Model Performance**: 93.48% accuracy, 0.9632 ROC-AUC score
-- **Feature Importance**: Identify top factors influencing churn
-- **Business Recommendations**: Actionable insights for retention strategies
-- **Risk Categorization**: Low/Medium/High risk classification
+## 📌 Project Overview
 
-### 🎨 **User Experience**
-- **Interactive Dashboard**: Beautiful Streamlit interface with real-time updates
-- **Visual Analytics**: Charts, graphs, and progress meters
-- **Export Results**: Download predictions as CSV for further analysis
-- **Sample Templates**: Pre-formatted CSV templates for easy data upload
+Customer churn is one of the biggest challenges faced by subscription-based businesses.  
+This project predicts **which customers are likely to leave** using machine learning, enabling **early intervention and retention strategies**.
 
-## 🏗️ Architecture
+### 🔍 Key Highlights
+- Trained on **15,000+ real telecom customer records**
+- End-to-end ML pipeline: preprocessing → feature engineering → modeling → deployment
+- Business-focused insights, not just predictions
+- Fully deployed and production-ready
 
-    A[Customer Data] --> B[Feature Engineering]
-    B --> C[Random Forest Model]
-    C --> D{Churn Prediction}
-    D --> E[Streamlit Dashboard]
-    D --> F[Business Insights]
-    E --> G[Single Prediction]
-    E --> H[Batch Processing]
-    F --> I[Risk Assessment]
-    F --> J[Recommendations]
+---
 
-    🚀 Quick Start
-Option 1: Local Installation (5 minutes)
-# 1. Clone the repository
+## 🎯 What This Project Demonstrates
+
+✅ Machine Learning fundamentals  
+✅ Feature engineering & model optimization  
+✅ Model evaluation & interpretation  
+✅ Data-driven business decision making  
+✅ ML model deployment using Streamlit  
+
+---
+
+## 🧠 Machine Learning Details
+
+### Model
+- **Algorithm**: Random Forest Classifier
+- **Hyperparameter Tuning**: GridSearchCV (5-fold cross-validation)
+- **Class Balancing**: Handled for realistic churn distribution
+
+### Performance
+
+| Metric | Score |
+|------|------|
+| Accuracy | **93.48%** |
+| ROC-AUC | **0.963** |
+| Precision | **97%** |
+| Recall | **78%** |
+
+---
+
+## 🧩 Feature Engineering
+
+Created **29+ engineered features**, including:
+- Tenure groups (new / loyal customers)
+- Charge-per-service ratios
+- Service engagement scores
+- High-risk churn flags
+
+### 🔝 Top Predictive Features
+1. Customer Service Calls  
+2. Contract Type  
+3. Tenure  
+4. Monthly Charges  
+5. Tech Support Usage  
+
+---
+
+## 🌐 Application Features
+
+### 🔮 Prediction Modes
+- **Single Customer Prediction**
+- **Batch Prediction via CSV Upload**
+
+### 📊 Insights & Analytics
+- Feature importance visualization
+- Risk level classification (Low / Medium / High)
+- Actionable retention recommendations
+
+### 📥 Export
+- Download prediction results as CSV
+- Ready-to-use CSV templates provided
+
+---
+
+## 🏗️ System Architecture
+
+Customer Data
+↓
+Feature Engineering
+↓
+Random Forest Model
+↓
+Churn Probability
+↓
+Streamlit Dashboard
+↓
+Business Insights & Recommendations
+
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-----|-----------|
+| Language | Python |
+| ML | Scikit-learn (Random Forest) |
+| Data | Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn |
+| Web App | Streamlit |
+| Model Storage | Joblib |
+| Deployment | Streamlit Cloud |
+
+---
+
+## 📁 Project Structure
+
+customer-churn-prediction/
+│
+├── app/
+│ └── churn_app.py # Streamlit web app
+│
+├── src/
+│ └── churn_prediction.py # ML pipeline & training
+│
+├── models/
+│ ├── churn_model.pkl
+│ └── model_evaluation.png
+│
+├── data/
+│ └── Telco_Customer_Churn_Expanded.xlsx
+│
+├── notebooks/
+│ └── churn_analysis.ipynb
+│
+├── requirements.txt
+└── README.md
+
+---
+
+## 🚀 Run Locally
+
+```bash
+# Clone repository
 git clone https://github.com/kaveeshaDivyanjalee/customer-churn-prediction.git
-
 cd customer-churn-prediction
 
-# 2. Install dependencies
+# Install dependencies
 pip install -r requirements.txt
 
-# 3. Train the model
+# Train model
 python src/churn_prediction.py
 
-# 4. Launch the application
+# Run app
 python -m streamlit run app/churn_app.py
-
-Option 2: Cloud Deployment (Streamlit Cloud)
-Fork this repository
-
-Go to share.streamlit.io
-
-Connect your GitHub account
-
-Deploy with one click!
-
-📁 Project Structure
-customer-churn-prediction/
-├── app/                          # Streamlit web application
-│   └── churn_app.py             # Main dashboard application
-├── src/                          # Machine learning source code
-│   └── churn_prediction.py      # ML pipeline and model training
-├── models/                       # Trained models and artifacts
-│   ├── churn_model.pkl          # Serialized model
-│   └── model_evaluation.png     # Performance visualizations
-├── data/                         # Dataset storage
-│   └── Telco_Customer_Churn_Expanded.xlsx
-├── notebooks/                    # Jupyter notebooks
-│   └── churn_analysis.ipynb     # Exploratory analysis
-├── requirements.txt             # Python dependencies
-├── README.md                    # This file
-└── .gitignore                   # Git ignore rules
-
-🔧 Technical Stack
-Component	Technology	Purpose
-Frontend	Streamlit	Interactive web dashboard
-Backend ML	Scikit-learn, Random Forest	Predictive modeling
-Data Processing	Pandas, NumPy	Feature engineering
-Visualization	Matplotlib, Seaborn	Charts and graphs
-Model Persistence	Joblib	Save/load trained models
-Deployment	Streamlit Cloud	Hosting and scaling
-📊 Model Performance
-Metric	Score	Interpretation
-Accuracy	93.48%	Overall prediction correctness
-ROC-AUC	0.9632	Excellent discrimination power
-Precision	97%	High confidence in churn predictions
-Recall	78%	Good coverage of actual churners
-
-🎯 Top 10 Predictive Features
-Customer Service Calls (47% importance)
-
-Contract Type (Month-to-month vs. Yearly)
-
-Tenure Duration
-
-Monthly Charges
-
-Online Security Status
-
-Tech Support Usage
-
-Number of Services
-
-Payment Method
-
-Internet Service Type
-
-Paperless Billing
+Open 👉 http://localhost:8501
 
 💼 Business Impact
-Financial Benefits
-Reduce churn by 30-50% with targeted interventions
 
-Save millions in customer acquisition costs
+✔ Identify high-risk customers early
+✔ Reduce churn by 30–50%
+✔ Lower acquisition costs
+✔ Improve customer lifetime value
+✔ Support data-driven retention strategies
 
-Increase customer lifetime value through proactive retention
+📊 Dataset
 
-Operational Efficiency
-Prioritize high-risk customers for retention efforts
+✔Source: Kaggle – Telecommunication Customer Churn Dataset
 
-Automate churn risk scoring across customer base
+✔Records: 15,000+ customers
 
-Data-driven decision making for marketing and support teams
+✔Target Variable: Churn (Yes / No)
 
-🎮 Using the Application
-Single Customer Prediction
-Navigate to "Single Prediction" page
+🎓 Ideal For
 
-Enter customer details in the form
+✔Data Science portfolios
 
-Click "Predict Churn" button
+✔Machine Learning interviews
 
-View prediction results and recommendations
+✔Final-year or capstone projects
 
-Batch Predictions
-Go to "Batch Predictions" page
+✔Real-world ML deployment demos
 
-Download the sample CSV template
+👩‍💻 Author
 
-Fill with your customer data
+Kaveesha Divyanjalee
+🔗 GitHub: https://github.com/kaveeshaDivyanjalee
 
-Upload and get predictions for all customers
+⭐ Support
 
-Download results as CSV
+If you found this project useful:
 
-Model Insights
-View feature importance rankings
+⭐ Star the repository
 
-Understand model performance metrics
+💬 Share feedback
 
-Get business recommendations for reducing churn
+🤝 Connect on LinkedIn
 
-🧪 Customization Guide
-Using Your Own Data
-Prepare CSV with required columns (see template)
-
-Update feature engineering as needed
-
-Retrain model with your data
-
-Adjust business logic for recommendations
-
-Model Improvements
-# In churn_prediction.py, modify hyperparameters:
-param_grid = {
-    'n_estimators': [100, 200, 300],
-    'max_depth': [10, 20, 30, None],
-    'min_samples_split': [2, 5, 10],
-    # Add your custom parameters
-}
-
-🤝 Contributing
-We welcome contributions! Here's how you can help:
-
-Report bugs by opening an issue
-
-Suggest features through the issue tracker
-
-Submit pull requests for improvements
-
-Improve documentation and examples
-
-Development Setup
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install development dependencies
-pip install -r requirements.txt
-pip install black flake8 pytest
-
-# Run tests
-pytest tests/
-
-📚 Learning Resources
-Streamlit Documentation
-
-Scikit-learn User Guide
-
-Feature Engineering for Machine Learning
-
-Customer Churn Prediction Techniques
-
-📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-🙏 Acknowledgments
-Built with the Telco Customer Churn dataset
-
-Inspired by real-world business challenges
-
-Thanks to the open-source community for amazing tools
-
-📞 Support
-Having issues or questions?
-
-Check the Troubleshooting Guide
-
-Open an issue on GitHub
-
-Reach out via LinkedIn
-
-Built with ❤️ using Python, Streamlit, and Scikit-learn.If you find this project useful, please give it a ⭐ on GitHub!
+Built with ❤️ using Python, Machine Learning, and Streamlit
