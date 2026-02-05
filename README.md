@@ -46,7 +46,7 @@ A complete end-to-end machine learning system that predicts customer churn with 
     🚀 Quick Start
 Option 1: Local Installation (5 minutes)
 # 1. Clone the repository
-git clone https://github.com/your-username/customer-churn-prediction.git
+git clone https://github.com/kaveeshaDivyanjalee/customer-churn-prediction.git
 cd customer-churn-prediction
 
 # 2. Install dependencies
