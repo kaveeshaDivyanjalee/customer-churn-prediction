@@ -151,10 +151,10 @@ ehthumbs.db
 Thumbs.db
 
 # Project specific
-models/churn_model.pkl
-models/model_evaluation.png
+#models/churn_model.pkl
+#models/model_evaluation.png
 data/Telco_Customer_Churn_Expanded.xlsx
-*.pkl
+#*.pkl
 *.pickle
 *.joblib
 
