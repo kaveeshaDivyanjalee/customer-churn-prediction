@@ -8,7 +8,7 @@
 A complete end-to-end machine learning system that predicts customer churn with **93.5% accuracy** using Random Forest classification. Features a production-ready Streamlit web application with interactive dashboard, batch processing, and actionable business insights.
 
 ## 🌟 Live Demo
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://customer-churn-prediction.streamlit.app)
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://customer-churn-prediction-bczicccnktkymsfewgwurk.streamlit.app/)
 
 *Click above to try the live application!*
 
