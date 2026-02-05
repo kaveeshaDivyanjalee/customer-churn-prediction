@@ -89,7 +89,7 @@ poetry.lock
 # pdm
 .pdm.toml
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+# PEP 582
 __pypackages__/
 
 # Celery stuff
@@ -132,9 +132,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
-# Virtual environment
-venv/
-
 # IDE
 .vscode/
 .idea/
@@ -150,17 +147,32 @@ venv/
 ehthumbs.db
 Thumbs.db
 
-# Project specific
-#models/churn_model.pkl
-#models/model_evaluation.png
-data/Telco_Customer_Churn_Expanded.xlsx
-#*.pkl
-*.pickle
-*.joblib
+# Project specific - CRITICAL SECTION
+# We NEED the model for deployment, so DON'T ignore it!
+# The lines below are commented out to ALLOW these files
+# models/churn_model.pkl         ← ALLOWED (needed for app)
+# models/model_evaluation.png    ← ALLOWED (needed for app)
 
-# Streamlit
-.streamlit/
-streamlit/secrets.toml
+# Data files - Keep dataset private, but allow model
+data/Telco_Customer_Churn_Expanded.xlsx
+data/*.csv
+data/*.json
+data/*.parquet
+data/*.feather
+
+# IMPORTANT: Do NOT ignore .pkl files in models/ folder!
+# We use a more specific pattern below to only ignore pickles elsewhere
+# *.pkl                           ← REMOVED (was blocking model)
+# *.joblib                        ← REMOVED (was blocking model)
+*.pickle
+
+# Allow models folder content explicitly
+!models/*.pkl
+!models/*.png
+!models/*.joblib
+
+# Streamlit secrets only (not config)
+.streamlit/secrets.toml
 
 # Logs
 logs/
@@ -172,12 +184,9 @@ temp/
 *.tmp
 *.temp
 
-# Data files
-*.csv
-*.xlsx
-*.json
-*.parquet
-*.feather
+# Specific data files in root only (not in subdirectories)
+/*.xlsx
+/*.json
 
 # MLflow
 mlruns/
@@ -187,10 +196,7 @@ mlflow/
 .dvc/
 .dvcignore
 
-# Jupyter
-.ipynb_checkpoints/
-
-# Output files
+# Output files (but not models!)
 output/
 results/
 predictions/
