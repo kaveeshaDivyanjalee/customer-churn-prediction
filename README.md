@@ -33,8 +33,6 @@ A complete end-to-end machine learning system that predicts customer churn with 
 
 ## 🏗️ Architecture
 
-```mermaid
-graph TB
     A[Customer Data] --> B[Feature Engineering]
     B --> C[Random Forest Model]
     C --> D{Churn Prediction}
@@ -235,4 +233,4 @@ Open an issue on GitHub
 
 Reach out via LinkedIn
 
-<div align="center"> <p>Built with ❤️ using Python, Streamlit, and Scikit-learn</p> <p>If you find this project useful, please give it a ⭐ on GitHub!</p> </div> ```
+Built with ❤️ using Python, Streamlit, and Scikit-learn.If you find this project useful, please give it a ⭐ on GitHub!
