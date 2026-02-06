@@ -23,6 +23,8 @@ This project predicts **which customers are likely to leave** using machine lear
 
 ### 🔍 Key Highlights
 - Trained on **15,000+ real telecom customer records**
+- 📊 Telecommunication Customer Churn Dataset
+👉 https://lnkd.in/dWpgp9cA
 - End-to-end ML pipeline: preprocessing → feature engineering → modeling → deployment
 - Business-focused insights, not just predictions
 - Fully deployed and production-ready
